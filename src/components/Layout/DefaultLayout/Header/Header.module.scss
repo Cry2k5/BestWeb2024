@@ -1,0 +1,72 @@
+@import '../../../../../node_modules/bootstrap/scss/bootstrap.scss';
+// @import 'path/to/bootstrap';
+
+.header {
+    position: fixed;
+    height: var(--header-height);
+    z-index: 10;
+}
+.my_navbar_toggler {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+}
+
+.my_navbar-collapse {
+    margin: 0 -12px;
+    padding: 0 12px;
+    background-color: transparent;
+}
+
+@media (max-width: 580px) {
+    .header {
+        background-color: var(--background-color);
+    }
+
+    .my_navbar-collapse {
+        background-color: var(--background-color);
+    }
+}
+
+.my_navbar-nav {
+    .my-nav-link {
+        color: #eee;
+        font-weight: 500;
+
+        &:hover,
+        &:focus {
+            color: var(--primary-color);
+        }
+    }
+
+    .nav-link.show {
+        color: var(--primary-color);
+    }
+}
+
+@media (max-width: 580px) {
+    .header {
+        background-color: var(--background-color);
+    }
+
+    .my_navbar-collapse {
+        background-color: var(--background-color);
+    }
+}
+
+.my_dropdown-menu {
+    a {
+        color: #000;
+
+        &:focus,
+        &:hover {
+            color: var(--primary-color);
+        }
+
+        &:active {
+            color: #ffffff;
+            text-decoration: none;
+            background-color: #f59e7e;
+        }
+    }
+}

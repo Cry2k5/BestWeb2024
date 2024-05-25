@@ -1,0 +1,303 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.my_img-slide {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.my_img-1 {
+    background: linear-gradient(50deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), var(--banner-1) no-repeat;
+    background-size: cover;
+}
+
+.my_img-2 {
+    background: linear-gradient(50deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), var(--banner-2) no-repeat;
+    background-size: cover;
+}
+
+.my_img-3 {
+    background: linear-gradient(50deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), var(--banner-3) no-repeat;
+    background-size: cover;
+}
+
+.my_carousel-caption {
+    top: 20%;
+    bottom: auto;
+    text-align: unset;
+
+    .location_name {
+        position: relative;
+        font-weight: 500;
+        left: 50px;
+        top: -20px;
+
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            background-color: var(--primary-color);
+            width: 29px;
+            height: 1px;
+            top: 50%;
+            left: -42px;
+        }
+    }
+
+    .text {
+        width: 50%;
+    }
+}
+
+.location_1 {
+    padding: 80px 13%;
+    background: linear-gradient(50deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), var(--bg);
+    background-attachment: fixed;
+    > div:has(.box-image) {
+        overflow: hidden;
+        position: relative;
+        height: 360px;
+
+        .box-image {
+            background-color: #090c0f;
+            border-radius: 10px;
+            overflow: hidden;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .location-1 {
+            z-index: 0;
+            width: 85%;
+            height: 85%;
+            right: 0;
+            top: 0;
+        }
+
+        .location-2 {
+            z-index: 2;
+            width: 40%;
+            height: 40%;
+            left: 0;
+            bottom: 0;
+        }
+
+        img {
+            border-radius: 10px;
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            padding: 2px;
+            transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        img:hover {
+            transform: scale(1.2);
+        }
+
+        .box-image:has(img:hover) {
+            z-index: 4;
+        }
+
+        .box-image:has(img:hover) + .box-image img {
+            filter: blur(1px);
+        }
+
+        .box-image::after {
+            content: '';
+            position: absolute;
+            width: 35%;
+            height: 220%;
+            background: linear-gradient(#fff, transparent);
+            animation: rotate 4s linear infinite;
+        }
+    }
+}
+
+.ft_location_1 {
+    padding: 30px 5% 5px;
+    background: linear-gradient(50deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), var(--ft-location-1);
+
+    background-size: cover;
+
+    background-attachment: fixed;
+}
+
+.ft_location_1,
+.ft_location_2,
+.ft_location_3 {
+    .item {
+        padding: 50px 30px 25px;
+        position: relative;
+
+        margin-top: 50px;
+
+        img {
+            position: absolute;
+            top: -35px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 75px;
+            border: 2px solid var(--primary-color);
+            border-radius: 100%;
+        }
+
+        p {
+            max-height: 165px;
+            min-height: 165px;
+            display: -webkit-box;
+            -webkit-line-clamp: 7; /* Số dòng tối đa */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.location_2 {
+    padding: 80px 13%;
+    background: linear-gradient(50deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), var(--bg);
+    background-attachment: fixed;
+    > div:has(.box-image) {
+        overflow: hidden;
+
+        .box-image {
+            background-color: #090c0f;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .location-1 {
+            z-index: 0;
+        }
+
+        .location-2 {
+            z-index: 2;
+            margin-bottom: 15px;
+        }
+
+        img {
+            border-radius: 10px;
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            padding: 2px;
+            transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        img:hover {
+            transform: scale(1.2);
+        }
+
+        .box-image:has(img:hover) {
+            z-index: 4;
+        }
+
+        .box-image:has(img:hover) + .box-image img {
+            filter: blur(1px);
+        }
+
+        .box-image::after {
+            content: '';
+            position: absolute;
+            width: 35%;
+            height: 220%;
+            background: linear-gradient(#fff, transparent);
+            animation: rotate 4s linear infinite;
+        }
+    }
+}
+
+.ft_location_2 {
+    padding: 30px 5% 5px;
+    background: linear-gradient(50deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), var(--ft-location-2);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.location_3 {
+    padding: 80px 13%;
+    background: linear-gradient(50deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), var(--bg);
+    background-attachment: fixed;
+    .box-image {
+        background-color: #090c0f;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        z-index: 3;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    img {
+        position: relative;
+        z-index: 1;
+        padding: 2px;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .cv {
+        z-index: 2;
+        position: absolute;
+        top: 2px;
+        bottom: 2px;
+        right: 2px;
+        left: 2px;
+        border-radius: 8px;
+        background: linear-gradient(#000, transparent);
+    }
+
+    .box-image:has(.cv:hover) p,
+    .box-image:has(.cv:hover) .cv,
+    .box-image:has(p:hover) p,
+    .box-image:has(p:hover) .cv {
+        opacity: 0;
+    }
+
+    .cv:hover ~ img,
+    p:hover ~ img {
+        transform: scale(1.06);
+    }
+
+    .box-image::after {
+        content: '';
+        z-index: 0;
+        position: absolute;
+        width: 35%;
+        height: 220%;
+        background: linear-gradient(#fff, transparent);
+        animation: rotate 4s linear infinite;
+    }
+}
+
+.ft_location_3 {
+    padding: 30px 5% 5px;
+    background: linear-gradient(50deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), var(--ft-location-3);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
