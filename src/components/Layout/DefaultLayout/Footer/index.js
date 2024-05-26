@@ -38,10 +38,11 @@ function Footer() {
                                 <p className={cx('mb-0 my_primary-color-opacity')}>Email</p>
                                 <p>anhht.23ite.@vku.udn.vn</p>
                                 <p>lamnt.23ite.@vku.udn.vn</p>
+                                <p>anhhh.23itb.@vku.udn.vn</p>
                             </div>
                             <div className={cx('col-sm-4')}>
                                 <FontAwesomeIcon icon={faPhone} className={cx('my_primary-color-opacity', 'icon')} />
-                                <p className={cx('mb-0 my_primary-color-opacity')}>Email</p>
+                                <p className={cx('mb-0 my_primary-color-opacity')}>Phone</p>
                                 <p>+849xx xxxx xxx</p>
                             </div>
                         </div>
